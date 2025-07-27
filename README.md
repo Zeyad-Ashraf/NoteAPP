@@ -1,55 +1,54 @@
 # 📝 NoteAPP
 
-NoteAPP هو تطبيق بسيط لتدوين الملاحظات، يحتوي على نظام مصادقة متكامل وإمكانية التفاعل مع الذكاء الاصطناعي لتلخيص محتوى الملاحظات.
+NoteAPP is a note-taking application that allows users to create and manage personal notes securely. It features complete authentication and integrates with AI to summarize note content intelligently.
 
 ---
 
 ## 🚀 Features
 
 ### 🔐 Authentication
-- ✅ **Sign Up**: تسجيل حساب جديد.
-- ✅ **Login**: تسجيل الدخول للمستخدم.
-- ✅ **Refresh Token**: تجديد التوكن تلقائيًا عند الانتهاء.
-- ✅ **Forget Password**: إرسال رابط لإعادة تعيين كلمة المرور.
-- ✅ **Reset Password**: إعادة تعيين كلمة المرور عبر الرابط.
-- ✅ **Confirm Password**: تأكيد كلمة المرور لتأكيد الهوية (مثلاً لتحديث الإيميل أو تغيير كلمة المرور).
+- ✅ **Sign Up**: Create a new account.
+- ✅ **Login**: User login with JWT.
+- ✅ **Refresh Token**: Automatically refresh expired tokens.
+- ✅ **Forget Password**: Send password reset link to user's email.
+- ✅ **Reset Password**: Reset the password using a secure token.
+- ✅ **Confirm Password**: Re-authenticate the user for sensitive actions.
 
-### 🗒️ Notes Management
-- ✅ **Add Note**: إضافة ملاحظة جديدة.
-- ✅ **Get All Notes**: عرض جميع الملاحظات الخاصة بالمستخدم.
-- ✅ **Delete Note**: حذف ملاحظة من النظام.
+### 🗒️ Note Management
+- ✅ **Add Note**: Create a new note.
+- ✅ **Get All Notes**: Retrieve all notes for the authenticated user.
+- ✅ **Delete Note**: Remove a specific note from the system.
 
-### 🧠 AI Integration
-- ✅ **Summarize Note**: باستخدام الذكاء الاصطناعي (OpenRouter أو نموذج ذكي آخر)، يمكنك تلخيص محتوى الملاحظة تلقائيًا بضغطة زر.
-
----
-
-## 🛠️ Technologies Used
-
-- **Node.js** + **Express.js**
-- **MongoDB** + **Mongoose**
-- **JWT Authentication**
-- **bcrypt** لتشفير كلمات المرور
-- **multer** (لو فيه صور أو مرفقات لاحقًا)
-- **OpenRouter API** لتلخيص الملاحظات باستخدام الذكاء الاصطناعي
+### 🤖 AI Integration
+- ✅ **Summarize Note**: Uses an AI model (via OpenRouter API) to generate a concise summary of the note content.
 
 ---
 
-## ⚙️ Installation & Running the Project
+## 🛠️ Tech Stack
+
+- **Node.js** & **Express.js**
+- **MongoDB** with **Mongoose**
+- **JWT** for authentication
+- **bcrypt** for password hashing
+- **multer** for file handling (optional)
+- **OpenRouter API** for AI-powered summarization
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-# 1. Clone the project
 git clone https://github.com/your-username/NoteAPP.git
 cd NoteAPP
-
-# 2. Install dependencies
+```
+### 2. Install Dependencies
+```
 npm install
+```
 
-# 3. Create .env file and configure:
-# - PORT
-# - DB_URI (MongoDB connection string)
-# - JWT_SECRET
-# - OPENROUTER_API_KEY
-
-# 4. Run the project
+### 3.Run the App
+```
 npm run start
+```
