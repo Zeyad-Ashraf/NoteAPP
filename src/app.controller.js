@@ -5,6 +5,7 @@ import { globalErrorHandler } from "./utils/index.js";
 import helmet from "helmet";
 import { rateLimit } from "express-rate-limit";
 import cors from "cors";
+import expressPlayground from "graphql-playground-middleware-express";
 
 export const appController = (app,express) => {
 
@@ -30,7 +31,11 @@ export const appController = (app,express) => {
     });
 
     app.use("/auth", authRouter);
+
     app.use("/graphql", notesRouter);
+    app.get("/playground", expressPlayground.default({
+        endpoint: "/graphql"
+    }));
 
     // 404 Catch-All for all unmatched routes
     app.all(/^\/.*/, (req, res) => {
